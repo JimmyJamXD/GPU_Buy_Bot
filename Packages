@@ -1,0 +1,15 @@
+install anaconda
+
+go to environments and create "new environment" for your code
+click next
+
+make sure to click "play sign" to initialize environment
+
+go to terminal and initialize environment
+activate "**********" (whichever you named it)
+
+install these packages:
+conda install selenium
+conda install -c conda-forge python-chromedriver-binary
+conda install bs
+conda install pandas
