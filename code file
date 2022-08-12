@@ -77,5 +77,3 @@ place_order = wd.find_element_by_xpath('//*[@id="btnCreditCard"]')
 place_order.click()
 
 
-
-
