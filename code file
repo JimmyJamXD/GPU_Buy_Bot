@@ -1,0 +1,81 @@
+from selenium import webdriver as wd
+import chromedriver_binary
+import random
+
+wd = wd.Chrome()
+wd.implicitly_wait(10)
+
+wd.get("https://www.newegg.com/asus-geforce-rtx-3080-strix-rtx3080-o10g-v2-gaming/p/N82E16814126534?Description=rtx%203080&cm_re=rtx_3080-_-14-126-534-_-Product")
+
+import time
+time.sleep(1)
+add_to_cart_button = wd.find_element_by_xpath('//*[@id="ProductBuy"]/div/div[2]/button')
+add_to_cart_button.click()
+
+import time
+time.sleep(1)
+
+add_to_cart_button = wd.find_element_by_xpath('//*[@id="ProductBuy"]/div/div[2]/button')
+add_to_cart_button.click()
+
+import time
+time.sleep(1)
+no_thanks_button = wd.find_element_by_xpath('//*[@id="modal-intermediary"]/div/div/div/div[3]/button[1]')
+no_thanks_button.click()
+
+import time
+time.sleep(10)
+view_cart_button = wd.find_element_by_xpath('//*[@id="modal-intermediary"]/div/div/div[2]/div[2]/button[2]')
+view_cart_button.click()
+
+import time
+time.sleep(10)
+user_checkout_button = wd.find_element_by_xpath('//*[@id="labeled-input-signEmail"]')
+user_checkout_button.click()
+
+import time
+time.sleep(3)
+email_input = wd.find_element_by_xpath('//*[@id="labeled-input-signEmail"]')
+type(email_input)
+email_input.send_keys("***********") "input your email
+
+import time
+time.sleep(1)
+sign_in_button = wd.find_element_by_xpath('//*[@id="signInSubmit"]')
+sign_in_button.click()
+
+import time
+time.sleep(3)
+password_input = wd.find_element_by_xpath('//*[@id="labeled-input-password"]')
+type(password_input)
+password_input.send_keys("*********") "input your password
+
+import time
+time.sleep(1)
+password_button = wd.find_element_by_xpath('//*[@id="signInSubmit"]')
+password_button.click()
+
+import time
+time.sleep(10)
+payment_button = wd.find_element_by_xpath('//*[@id="deliveryItemCell"]/div/div[3]/button')
+payment_button.click()
+
+import time
+time.sleep(2)
+input_CVV = wd.find_element_by_xpath('//*[@id="paymentItemCell"]/div/div[2]/div[2]/div[3]/div[2]/div[3]/div[1]/div/label/div[4]/input')
+type(input_CVV)
+input_CVV.send_keys("***") "input your cc information"
+
+import time
+time.sleep(5)
+credit_card_review = wd.find_element_by_xpath('//*[@id="paymentItemCell"]/div/div[3]/button')
+credit_card_review.click()
+
+import time
+time.sleep(5)
+place_order = wd.find_element_by_xpath('//*[@id="btnCreditCard"]')
+place_order.click()
+
+
+
+
